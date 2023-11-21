@@ -250,13 +250,12 @@ button {
 }
 
 .items-plan__title {
- 
     color: #161C35;
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
     padding: 30px;
-    max-width: 183px;
+    max-width: 245px;
 }
 
 .items-plan__block:not(:first-child) {
@@ -306,14 +305,22 @@ button {
 
 .service {
     background-color: #192144;
+    border-radius: 0 0 40px 40px;
+
+    overflow: hidden;
 }
-.container {
-}
+
 .service__wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 .service__info {
     display: flex;
     flex-direction: column;
+    max-width: 619px;
+    padding-top: 42px;
+    padding-bottom: 163px;
 }
 .service__title {
     margin-bottom: 57px;
@@ -337,10 +344,22 @@ button {
     font-weight: 700;
     line-height: 1.14;
     margin-bottom: 85px;
+    max-width: 425px;
 }
 .services__btn {
+    position: relative;
+    width: 274px;
+}
+.services__btn::after {
+    content: '';
+    position: absolute;
+    right: 35px;
+    width: 14px;
+    height: 18px;
+    background: url('./assets/img/more.svg') 0 0 / cover no-repeat;
 }
 .button-default {
+    padding: 29px 32px 27px;
     background-color: #FFD74B;
     border-radius: 20px;
     color:  #1D2E5B;
@@ -348,10 +367,170 @@ button {
     font-weight: 700;
     line-height: 1;
     }
+
 .service__block-image {
+    width: 630px;
+    height: 665px;
+}
+.service__block-image img:last-child{
+    display: none;
+}
+.service__block-image img {
+    max-width: 100%;
 }
 
-@media (min-width: 1280px){
+
+
+
+
+.directions {
+    padding-top: 73px;
+    background-color: #EDEFF6;
+    padding-bottom: 138px;
+}
+
+.directions__wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 161px;
+}
+
+.directions__items{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 73px;
+}
+
+.directions__items::before{
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    background: #E2E5F2;
+    width: 140px;
+    height: 140px;
+    left: -71px;
+    top: -71px;
+}
+
+.directions__text{
+    max-width: 344px;
+    color:  #444;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.17;
+    margin-bottom: 98px;
+}
+
+.directions__info{
+    position: relative;
+    z-index: 4;
+    padding-right: 140px;
+}
+
+.directions__info::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -78px;
+    background: url('./assets/img/country/county-banner.jpg') 0 0 / cover no-repeat;
+    width: 287px;
+    height: 575px;
+    z-index: -1;
+}
+
+.directions__title{
+    margin-bottom: 58px;
+}
+
+.directions__all-btn {
+    position: relative;
+    width: 275px;
+    text-align: left;
+}
+
+.directions__all-btn::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   right: 36px;
+   background: url('./assets/img/more.svg') 0 0 / cover no-repeat;
+   height: 18px;
+   width: 14px;
+}
+.item-country{
+    position: relative;
+}
+
+.item-country::after{
+    content: '';
+    position: absolute;
+    right: 152px;
+    top: 24px;
+    width: 70px;
+    height: 47px;
+}
+
+.item-country__info{
+    padding: 24px 0 27px 29px;
+}
+
+.item-country__title{
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+
+.item-country__desc{
+    color: #444;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 0.3;
+    margin-bottom: 26px;
+}
+
+.item-country:first-child:after{
+    background: url('./assets/img/country/Thailand-flag.png') 0 0 / cover no-repeat;
+}
+.item-country:nth-child(2):after{
+    background: url('./assets/img/country/France-flag.png') 0 0 / cover no-repeat;
+}
+.item-country:last-child:after{
+    background: url('./assets/img/country/Czech-flag.png') 0 0 / cover no-repeat;
+}
+.item-country__people{
+    position: relative;
+    display: block;
+    color: rgba(0,0,0, 0.3);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    padding-left: 32px;
+}
+.item-country__people::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    background: url('./assets/img/user.svg') 0 0 / cover no-repeat;
+}
+
+@media (min-width: 1281px){
+    .directions__wrapper > button {
+        display: none;
+    }
     .home__body::after {
         content: '';
         position: absolute;
@@ -365,11 +544,64 @@ button {
 }
 
 @media (min-width: 620px){
+    .directions__item{
+        width: 559px;
+        height: 140px;
+    }
     .home__body .header__links{
         display: none;
     }
+    .item-counry__block-image{
+        display: none;
+    }
+
+    .directions__item:first-child {
+        background: url('./assets/img/country/thailand.jpg'), lightgray 50% / cover no-repeat;
+    }
+    .directions__item:nth-child(2) {
+        background: url('./assets/img/country/france.jpg'), lightgray 50% / cover no-repeat;
+    }
+    .directions__item:last-child {
+        background: url('./assets/img/country/czech.jpg'), lightgray 50% / cover no-repeat;
+    }
+   
 }
 @media (max-width: 1280px) {
+    .directions__wrapper{
+        flex-direction: column-reverse;
+    }
+    .directions__info .directions__all-btn{
+        display: none;
+    }
+    .directions__all-btn{
+        width: 100%;
+        display: block;
+    }
+    .directions__items{
+        margin: 0 auto;
+        z-index: 5;
+    }
+    .service__block-image img:first-child{
+        display: none;
+    }
+    .service__block-image img:last-child{
+        display: block;
+    }
+    .service__info{
+        padding-bottom: 89px;
+    }
+    .service__block-image{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 376px;
+        height: 548px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .home {
         height: initial;
     }
@@ -441,7 +673,6 @@ button {
 }
 
 @media (max-width: 1024px) {
-
 
     .items-plan::after{
                 top: -245%;
@@ -517,7 +748,14 @@ button {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 996px){
+    .service__info{
+        flex: 0 1 39%;
+    }
+}
+
+@media (max-width: 769px) {
+
     .service__title {
         margin-bottom: 40px;
     }
@@ -587,7 +825,47 @@ button {
     }
 }
 
+@media (max-width: 720px){
+    .services__btn{
+        display: none;
+    }
+    .service__info{
+        flex: 1 1 auto;
+        z-index: 3;
+        padding-bottom: 82px;
+    }
+.service__block-image{
+    max-width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    margin: 0 auto;
+    left: 0;
+}
+    .service__citation{
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+}
+
 @media (max-width: 620px){
+
+    .directions__items{
+        margin: 0;
+    }
+    .service__items {
+        display: flex;
+        flex-direction: column;
+    }
+    .item-counry__block-image img{
+        width: 100%;
+    }
+    .service__block-image img:first-child{
+        display: block;
+    }
+    .service__block-image img:last-child{
+        display: none;
+    }
     .service__title {
         margin-bottom: 19px;
     }
