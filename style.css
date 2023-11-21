@@ -206,8 +206,8 @@ button {
     font-weight: 700;
     line-height: 1.16;
     color: #fff;
-    padding-left: 69px;
     margin: 0;
+    margin-left: 69px;
 }
 
 .home__decs {
@@ -260,7 +260,7 @@ button {
 }
 
 .items-plan__block:not(:first-child) {
-    margin-left: -31px;
+    margin-left: -36px;
 }
 
 .items-plan__block:first-child {
@@ -304,7 +304,52 @@ button {
     line-height: 1;
 }
 
-
+.service {
+    background-color: #192144;
+}
+.container {
+}
+.service__wrapper {
+}
+.service__info {
+    display: flex;
+    flex-direction: column;
+}
+.service__title {
+    margin-bottom: 57px;
+}
+.title-block {
+    color: #FF8D30;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1;
+}
+.service__text {
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.17;
+    margin-bottom: 38px;
+}
+.service__citation {
+    color: #FFF;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.14;
+    margin-bottom: 85px;
+}
+.services__btn {
+}
+.button-default {
+    background-color: #FFD74B;
+    border-radius: 20px;
+    color:  #1D2E5B;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    }
+.service__block-image {
+}
 
 @media (min-width: 1280px){
     .home__body::after {
@@ -319,6 +364,11 @@ button {
     }
 }
 
+@media (min-width: 620px){
+    .home__body .header__links{
+        display: none;
+    }
+}
 @media (max-width: 1280px) {
     .home {
         height: initial;
@@ -353,16 +403,24 @@ button {
     .items-plan__block:first-child{
         width: 365px;
         margin-left: auto;
+        border-radius: 11px 0;
+        margin-right: 3px;
     }
     .items-plan__block:nth-child(2){
         width: 344px;
+        border-radius: 11px 11px 0 0px;
+    }
+    .items-plan__block:nth-child(2)::after{
+        right: 32px;
     }
     .items-plan__block:nth-child(3){
         width: 368px;
         margin-left: auto;
+        border-radius: 0 11px;
     }
     .items-plan__block:last-child{
         width: 344px;
+        border-radius: 0 0px 11px 11px;
     }
     .items-plan__block{
         border-radius: 7px;
@@ -370,24 +428,26 @@ button {
     .home__wrapper{
         flex-direction: column;
         padding-top: 162px;
-        margin-bottom: 211px;
+        margin-bottom: 250px;
     }
     .home__decs{
-         padding-left: 72px;
+         margin-left: 32px;
     }
     .home__title{
-        padding-left: 0;
+        margin-left: 0;
         margin: 0 auto 86px;
         text-align: center;
     }
 }
 
 @media (max-width: 1024px) {
+
+
     .items-plan::after{
-        top: -245%;
+                top: -245%;
     }
     .header {
-        padding-top: 40px;
+        padding-top: 0px;
     }
 
     .header__logo {
@@ -397,7 +457,7 @@ button {
     .header__menu,
     .header__links a {
         position: absolute;
-        left: -100%;
+        left: -200%;
     }
 
     .header__links.active a {
@@ -458,6 +518,22 @@ button {
 }
 
 @media (max-width: 768px) {
+    .service__title {
+        margin-bottom: 40px;
+    }
+    .title-block{
+        font-size: 24px;
+    }
+    .service__text {
+        margin-bottom: 31px;
+    }
+    .service__citation {
+        line-height: 1.19;
+        margin-bottom: 52px;
+    }
+    .button-default {
+        font-size: 18px;
+    }
     .header__logo {
         width: 166px;
         height: 42px;
@@ -476,10 +552,16 @@ button {
     }
     .items-plan__block:first-child, .items-plan__block:nth-child(3){
         width: 100%;
-        margin-left: 0;
+        margin-left: 18px;
     }
-    .items-plan__block:not(:last-child)::after{
-        right: 32px;
+    .items-plan__title{
+        padding: 31px 32px 61px;
+    }
+    .items-plan__block:not(:last-child)::after, .items-plan__block:last-child::after{
+        right: initial;
+        left: 33px;
+        bottom: 21px;
+        top: initial;
     }
     .home__citation{
         color: #FFF;
@@ -501,17 +583,130 @@ button {
     }
 
     .items-plan::after {
-        top: -282%;
+        top: -176%;
     }
 }
 
 @media (max-width: 620px){
+    .service__title {
+        margin-bottom: 19px;
+    }
+    .service__text {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.37;
+    }
     .items-plan{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 39px;
     }
     .items-plan::after {
+        content: none;
         top: -141%;
+    }
+    .header__links {
+      display: none;
+    }
+    .home__wrapper  .header__links {
+        display: flex;
+    }
+    .home__wrapper  .header__links a {
+        position: static;
+    }
+    .home__wrapper .header__links{
+        position: relative;
+    }
+    .home__wrapper .header__links::after{
+        content: '';
+        position: absolute;
+        right: 8%;
+        background: url("./assets/img/banner-mb.png") 0 0 / cover no-repeat;
+        width: 192px;
+        height: 255px;
+        top: -240px;
+        z-index: -3;
+}
+
+    .home__title{
+        margin-bottom: 255px;
+    }
+    .header__auth{
+        flex: 1 1 auto;
+        padding: 12px 30px 8px;
+    }
+    .home__title{
+        font-size: 36px;
+        line-height: 1.1;
+    }
+    .header__links a{
+        padding: 11px;
+    }
+    .header__links{
+        margin-bottom: 28px;
+    }
+    .items-plan::after{
+        width: 192px;
+        height: 255px;
+        top: -134%;
+    }
+    .header {
+        padding-top: 0;
+    }
+    .header__body{
+        padding-top: 19px;
+    }
+    .home__wrapper{
+        padding-top: 94px;
+        margin-bottom: 30px;
+    }
+    .home__decs{
+        margin-left: 25px;
+        gap: 18px;
+    }
+    .home__citation{
+        max-width: 151px;
+    }
+    .home__text{
+        max-width: 161px;
+    }
+    .items-plan__block {
+        border-radius: 0;
+    }
+    .items-plan__block:last-child{
+        border-radius: 0 0 11px 11px;
+    }
+    .items-plan__block:first-child, .items-plan__block:nth-child(3){
+        margin-left: 0;
+        border-radius: inherit;
+    }
+    .items-plan__block:not(:last-child)::after, .items-plan__block::after{
+        right: 19px;
+        font-size: 18px;
+    }
+    .items-plan__block:not(:last-child)::after{
+        left: inherit;
+        bottom: initial;
+        top: 22px;
+    }
+    .items-plan__block:nth-child(2){
+        border-radius: 0;
+    }
+    .items-plan__block:first-child{
+        border-radius: 11px 11px 0px 0px;
+        margin-right: 0;
+    }
+    .items-plan__block:last-child::after{
+        top: 22px;
+        left: initial;
+        right: 21px;
+    }
+    .items-plan__title{
+        padding: 22px 24px;
+    }
+    .header__auth{
+        font-size: 17px;
+        line-height: 1.17;
     }
 }
