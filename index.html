@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <title>Super maket</title>
+    <title>Super maket | Step HTML/CSS/JS</title>
 </head>
 <body>
-
     <header class="header">
         <div class="container">
             <div class="header__body">
@@ -33,6 +32,7 @@
                         </clipPath>
                         </defs>
                         </svg>
+                    <img src="./assets/img/logo-go.svg" alt="logo">
                 </a>
                 <div class="header__menu">
                     <ul class="header__list">
@@ -58,58 +58,6 @@
             </div>
         </div>
     </header>
-
-
-
-    <div class="modal-burger">
-        <div class="modal-burger__wrapper">
-        <div class="container">
-            <div class="modal-burger__body">
-                <div class="header__body">
-                    <a href="/" class="header__logo">
-                        <img src="./assets/img/logo_footer.svg" alt="logo">
-                        <img src="./assets/img/logo-go.svg" alt="logo">
-                    </a>
-                    <div class="header__burger">
-                        <span></span>
-                    </div>
-                    <div class="header__links">
-                        <button class="header__auth">
-                            авторизация
-                        </button>
-                    </div>
-                </div>
-                <div class="header__menu">
-                    <ul class="header__list">
-                        <li class="header__item"><a href="#service">о сервисе</a></li>
-                        <li class="header__item"><a href="#directions">направления</a></li>
-                        <li class="header__item"><a href="#companion">попутчики</a></li>
-                    </ul>
-                </div>
-                <button class="header__auth header__auth_mobile">
-                    авторизация
-                </button>
-                <div class="header__contacts-mob interesred__links">
-                    <a href="+88005558628" class="interesred__phone">8 800 555-86-28</a>
-                    <a href="mailto:mail@htmlacademy.ru" class="interesred__mail">mail@htmlacademy.ru</a>
-                </div>
-                <div class="modal-burger__social social">
-                    <div class="social__item">
-                        <img src="./assets/img/social/icon_facebook.svg" alt="facebook">
-                    </div>
-                    <div class="social__item">
-                        <img src="./assets/img/social/icon_vkontakte.svg" alt="vkontakte">
-                    </div>
-                    <div class="social__item">
-                        <img src="./assets/img/social/icon_instagram.svg" alt="instagram">
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-
-
     <main class="main-go">
         <section class="home">
             <div class="container">
@@ -191,7 +139,7 @@
                 <div class="directions__wrapper">
                      <button class="directions__all-btn button-default">Показать все</button>
                     <div class="directions__items">
-                        <div class="directions__item item-country">
+                        <a href="#"  class="directions__item item-country">
                             <div class="item-counry__block-image">
                                 <img src="./assets/img/country/thailand-mobile 1.png" alt="thailand">
                             </div>
@@ -201,8 +149,8 @@
                             <span class="item-country__people">18321</span>
                             </div>
                            
-                        </div>
-                        <div class="directions__item item-country">
+                        </a>
+                        <a href="#"  class="directions__item item-country">
                             <div class="item-counry__block-image">
                                 <img src="./assets/img/country/france-mobile 1.png" alt="france">
                             </div>
@@ -212,8 +160,8 @@
                             <span class="item-country__people">12518</span>
                             </div>
                             
-                        </div>
-                        <div class="directions__item item-country">
+                        </a>
+                        <a href="#"  class="directions__item item-country">
                             <div class="item-counry__block-image">
                                 <img src="./assets/img/country/czech-mobile 1.png" alt="Czech">
                             </div>
@@ -223,7 +171,7 @@
                             <span class="item-country__people">5326</span>
                             </div>
                       
-                        </div>
+                        </a>
                     </div>
                     <div class="directions__info">
                         <h2 class="directions__title title-block">Направления</h2>
@@ -473,11 +421,11 @@
 Уже&nbsp;зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.
                 </div>
                 <form action="" class="interesred__form">
-                    <input type="text" class="interesred__input" placeholder="E-mail">
+                    <input type="email" class="interesred__input" placeholder="E-mail">
                     <button class="interesred__btn services__btn button-default"><span>Регистрация</span></button>
                 </form>
                 <p class="interesred__ask">
-                    Остались вопросы? Мы с радостью на них ответим!
+                    Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на&nbsp;них&nbsp;ответим!
                 </p>
             </div>
                 <div class="interesred__links">
@@ -492,9 +440,9 @@
                         <address class="location__text">
                             ул. Большая Конюшенная, 19/8
                         </address>
-                        <div class="location__btn-route button-default services__btn">
+                        <button class="location__btn-route button-default services__btn">
                             Проложить маршрут
-                     </div>
+                     </button>
                 </div>
             </div>
             <div class="location__map">
@@ -502,6 +450,55 @@
             </div>
         </section>
     </main>
+    <div class="modal-burger">
+        <div class="modal-burger__wrapper">
+        <div class="container">
+            <div class="modal-burger__body">
+                <div class="header__body">
+                    <a href="/" class="header__logo">
+                        <img src="./assets/img/logo_footer.svg" alt="logo">
+                        <img src="./assets/img/logo-go.svg" alt="logo">
+                    </a>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <div class="header__links">
+                        <button class="header__auth">
+                            авторизация
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-burger__content">
+                    <div class="header__menu">
+                        <ul class="header__list">
+                            <li class="header__item"><a href="#service">о сервисе</a></li>
+                            <li class="header__item"><a href="#directions">направления</a></li>
+                            <li class="header__item"><a href="#companion">попутчики</a></li>
+                        </ul>
+                    </div>
+                    <button class="header__auth header__auth_mobile">
+                        авторизация
+                    </button>
+                    <div class="header__contacts-mob interesred__links">
+                        <a href="+88005558628" class="interesred__phone">8 800 555-86-28</a>
+                        <a href="mailto:mail@htmlacademy.ru" class="interesred__mail">mail@htmlacademy.ru</a>
+                    </div>
+                    <div class="modal-burger__social social">
+                        <a href="#" class="social__item">
+                            <img src="./assets/img/social/icon_facebook.svg" alt="facebook">
+                        </a>
+                        <a href="#" class="social__item">
+                            <img src="./assets/img/social/icon_vkontakte.svg" alt="vkontakte">
+                        </a>
+                        <a href="#" class="social__item">
+                            <img src="./assets/img/social/icon_instagram.svg" alt="instagram">
+                        </a>
+                    </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
     <div class="modal-business">
         <div class="modal-business__body">
                 <h2 class="modal-business__title title-block">
@@ -547,26 +544,26 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__body">
-                <div class="footer__logo">
+                <a href="/" class="footer__logo">
                     <img src="./assets/img/logo_footer.svg" alt="logo">
                     <img src="./assets/img/logo-go.svg" alt="logo">
-                </div>
+                </a>
                 <div class="footer__social social">
-                    <div class="social__item">
+                    <a href="#" class="social__item">
                         <img src="./assets/img/social/icon_facebook.svg" alt="facebook">
-                    </div>
-                    <div class="social__item">
+                    </a>
+                    <a href="#"  class="social__item">
                         <img src="./assets/img/social/icon_vkontakte.svg" alt="vkontakte">
-                    </div>
-                    <div class="social__item">
+                    </a>
+                    <a href="#"  class="social__item">
                         <img src="./assets/img/social/icon_instagram.svg" alt="instagram">
-                    </div>
+                    </a>
                 </div>
                 <div class="footer__develeper">
                     <p class="footer__dev-text">Разработано</p> 
-                    <div class="footer__dev-img">
+                    <a href="#" class="footer__dev-img">
                         <img src="./assets/img/develop.svg" alt="dev-logo">
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

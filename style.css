@@ -26,8 +26,6 @@
     font-weight: 700;
 }
 
-
-
 a {
     color: initial;
     text-decoration: none;
@@ -60,6 +58,7 @@ body.noscroll{
 
 main {
     flex: 1 0 auto;
+    background-color: #192144;
 }
 
 footer {
@@ -196,7 +195,6 @@ button {
     background-color: #FFBD30;
 }
 
-
 .header__auth {
     color: #161C35;
     font-size: 20px;
@@ -206,21 +204,22 @@ button {
     border-radius: 25px;
     background: #FFD74B;
     padding: 16px 28px 14px;
+    transition: all .3s;
 }
 
+.header__auth:hover{
+    background: #caa92f;
+}
 
 .home {
     background: url('./assets/img/home-bg.jpg') 0 0 / cover no-repeat;
     height: 750px;
-  
+    border-radius: 0 0 75px 75px;
 }
-
-
 
 .home__body{
     position: relative;
 }
-
 
 .home__wrapper {
     display: flex;
@@ -339,6 +338,8 @@ button {
     border-radius: 0 0 40px 40px;
     overflow: hidden;
     padding-top: 106px;
+    position: relative;
+    z-index: 9;
 }
 
 
@@ -401,30 +402,34 @@ button {
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
+    transition: all .3s;
     }
 
+.button-default:hover {
+    background-color: #e7c135;
+}
 .service__block-image {
     width: 630px;
     height: 665px;
+    user-select: none;
 }
 .service__block-image img:last-child{
     display: none;
 }
 .service__block-image img {
     max-width: 100%;
+    pointer-events: none;
 }
 
 
-
-
-
 .directions {
-    padding-top: 73px;
+    padding-top: 113px;
     background-color: #EDEFF6;
     padding-bottom: 138px;
     border-radius: 0 0 40px 40px;
     position: relative;
     z-index: 8;
+    margin-top: -40px;
 }
 
 .directions__wrapper{
@@ -505,7 +510,6 @@ button {
     margin-bottom: 4px;
 }
 
-
 .item-country__desc{
     color: #444;
     font-size: 20px;
@@ -553,10 +557,9 @@ button {
     padding-top: 231px;
     padding-bottom: 134px;
     margin-top: -100px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 40px 40px;
 }
 
-.companion__container{}
 .companion__wrapper{
     display: flex;
     gap: 30px;
@@ -609,16 +612,22 @@ button {
     display: flex;
     flex-direction: column;
     flex: 0 1 285px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 23px 23px 0 0;
 }
-
+.companion__item:hover .card-companion__block-image{
+    transform: scale(1.1);
+} 
 .companion__info{
     position: relative;
 }
-.card-companion{}
+
 .card-companion__block-image{
     position: relative;
     width: 100%;
     height: 286px;
+    transition: all .3s;
 }
 .card-companion__block-image img{
     width: 100%;
@@ -694,9 +703,9 @@ button {
         border-radius: 50%;
         background-color: #F97676;
     }
-    .companion__item:last-child .card-companion__name::before{
-        background-color: #81E31E;
-    }
+.companion__item:last-child .card-companion__name::before{
+      background-color: #81E31E;
+}
 .card-companion__tags{
     display: flex;
     gap: 5px;
@@ -711,19 +720,12 @@ button {
     font-weight: 400;
     line-height: 1.15;
 }
-.card-companion__transport{}
 
 .transport-items{
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
 }
-
-
-.transport-items__img{
-
-}
-
 
 .card-companion__flags {
     display: flex;
@@ -736,12 +738,6 @@ button {
     margin: auto;
 }
 
-
-.flags-card{ 
-    
-}
-
-
 .flags-card__block-image img{
     width: 35px;
     height: 24px;
@@ -750,12 +746,12 @@ button {
 
 .profile{
     position: relative;
-    margin-top: -20px;
+    margin-top: -35px;
     background-color: #EDEFF6;
-    padding-top: 107px;
+    padding-top: 122px;
     padding-bottom: 207px;
     z-index: 6;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 40px 40px;
 }
 .profile__container{
     max-width: 1025px;
@@ -862,11 +858,15 @@ button {
     font-size: 20px;
     font-weight: 700;
     line-height: 1;
+    transition: all .3s;
+}
+.profile__btn-tarife:hover{
+    color: #5f79eb;
 }
 .profile__btn-tarife::before{
     position: absolute;
     content: '';
-    left: -67px;
+    left: -66px;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -899,7 +899,7 @@ button {
     padding-top: 109px;
     margin-top: -20px;
     padding-bottom: 131px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 40px 40px;
 }
 
 .interesred__container{
@@ -936,6 +936,7 @@ button {
     font-weight: 700;
     line-height: 1;
     border-radius: 20px 0 0 20px;
+    outline: none;
 }
 .interesred__input::placeholder{
     opacity: 0.3;
@@ -961,6 +962,12 @@ button {
     display: flex;
     justify-content: space-evenly;
 
+}
+.interesred__links a {
+    transition: all .3s;
+}
+.interesred__links a:hover {
+    color: #e6bf32;
 }
 .interesred__phone{
     position: relative;
@@ -1059,6 +1066,7 @@ button {
 .location__btn-route {
     width: 324px;
     border: 3px solid #192144;
+    text-align: left;
 }
 
 .location__map{
@@ -1095,9 +1103,6 @@ button {
     object-fit: cover;
     height: 100%;
 }
-.footer__social{
-   
-}
 .social{
     display: flex;
 }
@@ -1110,6 +1115,11 @@ button {
     justify-content: center;
     border-radius: 50%;
     background-color: #FFD74B;
+    transition: all .3s;
+}
+
+.social__item:hover{ 
+    background-color: #edc332;
 }
 
 .social__item img{
@@ -1141,8 +1151,6 @@ button {
     height: 100%;
     object-fit: cover;
 }
-
-
 
 .modal-business{
     position: fixed;
@@ -1180,9 +1188,6 @@ button {
     display: grid;
     row-gap: 37px;
     margin-bottom: 143px;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 37px; */
 }
 
 .modal-business__btn-closed{
@@ -1192,9 +1197,13 @@ button {
     line-height: 1.1;
     margin: 0 auto;
     display: block;
+    transition: all .3s;
+}
+.modal-business__btn-closed:hover{
+    color: #5f79eb;
 }
 
-.list-tarife{}
+
 
 .list-tarife__item{
     display: flex;
@@ -1211,6 +1220,9 @@ button {
 }
 
 @media (min-width: 1281px){
+    .profile__list.list-profile{
+        min-width: 503px;
+    }
     .directions__item:last-child::before{
         content: '';
         position: absolute;
@@ -1246,11 +1258,26 @@ button {
 }
 
 @media (min-width: 1024px){
+    .item-country::after{
+        transition: all .3s;
+    }
+    .item-country:hover::after{
+        right: 174px;
+    }
     .header__contacts-mob{
+        display: none;
+    }
+    .modal-burger{
         display: none;
     }
 }
 @media (min-width: 620px){
+    .header__logo img:last-child{
+        display: none;
+    }
+    .header__logo.active > img{
+        display: none;
+    }
     .header__auth_mobile{
         display: none;
     }
@@ -1263,6 +1290,7 @@ button {
         width: 287px;
         height: 575px;
         z-index: -1;
+        border-radius: 25px;
     }
     .directions__items::before{
         content: '';
@@ -1277,6 +1305,7 @@ button {
     .directions__item{
         width: 559px;
         height: 140px;
+        border-radius: 20px;
     }
     .home__body .header__links{
         display: none;
@@ -1297,6 +1326,9 @@ button {
    
 }
 @media (max-width: 1280px) {
+    .directions__info::after{
+        top: 0;
+    }
     .service{
         margin-top: -75px;
     }
@@ -1333,6 +1365,7 @@ button {
     .companion__item{
         flex: 1 1 auto;
     }
+
     .companion__info::after{
         left: initial;
         bottom: initial;
@@ -1348,6 +1381,7 @@ button {
     }
     .directions__wrapper{
         flex-direction: column-reverse;
+        padding-top: 33px;
     }
     .directions__info .directions__all-btn{
         display: none;
@@ -1457,6 +1491,11 @@ button {
         position: fixed;
         inset: 0;
         z-index: 200;
+        transition: transform .4s;
+        transform: translateY(-200%);
+    }
+    .modal-burger.active{
+        transform: translateY(0%);
     }
     .modal-burger__wrapper{
         padding-bottom: 92px;
@@ -1495,7 +1534,7 @@ button {
     .modal-burger .header__body{
         margin-bottom: 95px;
     }
-    .modal-burger__body{
+    .modal-burger__content{
         padding: 0 57px;
     }
     .modal-burger__body .header__logo img:last-child{
@@ -1568,7 +1607,6 @@ button {
     }
     .interesred__input{
         flex: 1 1 87%;
-        outline: none;
     }
     .interesred__btn{
         flex: 1 1 13%;
@@ -1838,12 +1876,6 @@ button {
     .service{
         padding-top: 61px;
     }
-    .header__logo img {
-        display: none;
-    }
-    .header__logo svg {
-        display: block;
-    }
     .footer__develeper{ 
         justify-content: space-between;
         width: 100%;
@@ -2054,7 +2086,9 @@ button {
     opacity: 0.1;
     margin: 0 auto;
     left: 0;
+
 }
+
     .service__citation{
         margin-bottom: 0;
         font-size: 16px;
@@ -2063,6 +2097,27 @@ button {
 }
 
 @media (max-width: 620px){
+    .header__logo.active img:last-child{
+        display: flex;
+        width: 96px;
+        height: 15px;
+    }
+    .header__logo.active .header__scroll{
+        display: none;
+    }
+    .header__logo img {
+        display: none;
+    }
+    .header__logo.active svg {
+        display: none;
+    }
+    .header__logo svg {
+        display: flex;
+    }
+
+    .home {
+        background: url('./assets/img/home-banner-mobile.jpg') top -180px left 0 / cover no-repeat;
+    }
     .modal-burger .header__burger span, .modal-burger .header__burger::before{
         width: 18px;
     }
@@ -2120,6 +2175,7 @@ button {
     }
     .directions{
         padding-bottom: 34px;
+        padding-top: 90px;
     }
     .directions__info{ 
         padding-left: 24px;
@@ -2310,5 +2366,11 @@ button {
 @media (max-width: 576px){
     .location__text{
        max-width: 143px; 
+    }
+}
+
+@media (max-width: 440px){
+    .home{
+        background: url('./assets/img/home-banner-mobile.jpg') top -180px left -122px / cover no-repeat;
     }
 }
