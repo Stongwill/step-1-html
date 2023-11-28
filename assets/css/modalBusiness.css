@@ -1,0 +1,110 @@
+
+.modal-business{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.modal-business.active{
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+
+.modal-business__body{
+    width: 52vw;
+    border-radius: 30px;
+    padding: 54px 58px;
+    background: #FFF;
+    box-shadow: 0px 4px 22px 0px rgba(29, 46, 91, 0.18);
+}
+
+.modal-business__title {
+    margin-bottom: 58px;
+    text-align: center;
+}
+
+.modal-business__items {
+    display: grid;
+    row-gap: 37px;
+    margin-bottom: 143px;
+}
+
+.modal-business__btn-closed{
+    color: #1D2E5B;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 auto;
+    display: block;
+    transition: all .3s;
+}
+.modal-business__btn-closed:hover{
+    color: #5f79eb;
+}
+
+
+
+.list-tarife__item{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.list-tarife__text{
+    color: #444;
+    font-size: 22px;
+
+    font-weight: 300;
+    line-height: 1.27;
+}
+
+@media (max-width: 1024px) {
+    .modal-business__items{
+        margin-bottom: 100px;
+    }
+    .modal-business__body{
+        width: 89vw;
+    }
+ 
+}
+
+@media (max-width: 720px){
+    .list-tarife__item{
+        flex-direction: column;
+        gap: 0;
+    }
+   
+    .list-tarife__text{
+        font-size: 16px;
+        line-height: 1.37;
+    }
+
+    .modal-business__btn-closed{
+        font-size: 16px;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+    .modal-business__title{
+        margin-bottom: 39px;
+    }
+    .modal-business__items{
+        margin-bottom: 65px;
+    }
+    .modal-business__body{
+        padding: 34px 25px;
+    }
+    .modal-business__items{
+        row-gap: 22px;
+    }
+    .modal-business__body{
+        width: 84vw;
+    }
+}

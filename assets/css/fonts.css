@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Blogger";
+    src: url("../fonts/Blogger_Sans.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Blogger";
+    src: url("../fonts/Blogger_Sans-Light.otf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Blogger";
+    src: url("../fonts/Blogger_Sans-Medium.otf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Blogger";
+    src: url("../fonts/Blogger_Sans-Bold.otf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
